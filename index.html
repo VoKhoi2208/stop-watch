@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stopwatch</title>
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* CSS styles for the popup */
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      display: none;
+    }
+
+    .error-message {
+      color: red;
+      margin-top: 10px;
+    }
+
+    /* CSS styles to hide buttons */
+    #timer,
+    #laps-container,
+    footer {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Stopwatch</h1>
+  <div id="timer">
+    <div id="timer-display">00 ngày 00 giờ 00 phút 00 giây</div>
+    <div id="buttons">
+      <button id="start-button">Bắt đầu</button>
+      <button id="stop-button">Dừng</button>
+      <button id="reset-button">Đặt lại</button>
+      <button id="lap-button">Vòng</button>
+      <button id="export-button">Xuất Excel</button>
+      <button id="clearButton">Xóa bảng</button>
+    </div>
+   
+    
+  </div>
+  <div id="laps-container">
+    <table id="laps-table">
+      <tr>
+        <th>#</th>
+        <th>Vòng thời gian</th>
+        <th>Thời gian hiện tại</th>
+      </tr>
+    </table>
+  </div>
+
+  <footer>
+    <p>© Bản quyền thuộc về VoKhoi 2023</p>
+  </footer>
+
+
+
+<script type="text/javascript">
+        function getIP(json) {
+            document.getElementById("ipAddress").innerHTML = json.ip;
+        }
+    </script>
+    <script type="text/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <div class="popup" id="popup">
+    <h2>Xác nhận</h2>
+    <p>Vui lòng đọc kĩ điều khoản dịch vụ và các tài liệu liên quan của chúng tôi:
+      <ul>
+  <li> <a href="https://mientrutrachnhiem.vominh15.repl.co/">Miễn trừ trách nhiệm-Disclaimer</a></li>
+<li> <a href="https://term.vominh15.repl.co/">Điều khoản dịch vụ-Terms of Servicer</a></li>
+  
+      </ul>
+    </p>
+    <input type="checkbox" id="agreement-checkbox"> Tôi đồng ý với tất cả nội dung <br>
+    <p>Lưu ý:Bằng việc tick vào ô trên và ấn vào ô Next bạn đồng ý với các nội dung được đề cập trong các tài liệu trên.Chúng tôi sẽ không chịu trách nhiệm những tổn thất do wedsite clone gây ra và bao gồm những điều trong hai tài liệu trên.Cảm ơn vì đã sử dụng wedsite này.</p>
+       <script>
+        function getIP(json) {
+            setTimeout(function() {
+                document.getElementById("ip-address").innerHTML = json.ip;
+            }, 2500); // 4 giây
+        }
+    </script>
+    <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+</head>
+<body>
+    <h1>Địa chỉ IP của bạn</h1>
+    <p id="ip-address">Đang tải...</p>
+       
+    <button onclick="nextButtonClick()">Next</button>
+    <p class="error-message" id="error-message"></p>
+  </div>
+
+  <script>
+    var popup = document.getElementById("popup");
+    var agreementCheckbox = document.getElementById("agreement-checkbox");
+    var errorMessage = document.getElementById("error-message");
+    var timer = document.getElementById("timer");
+    var lapsContainer = document.getElementById("laps-container");
+    var footer = document.querySelector("footer");
+
+    function nextButtonClick() {
+      if (agreementCheckbox.checked) {
+        popup.style.display = "none";
+        timer.style.display = "block";
+        lapsContainer.style.display = "block";
+        footer.style.display = "block";
+      } else {
+        errorMessage.textContent = "Vui lòng đọc và đồng ý với nội dung trong các tài liệu trên trước khi tiếp tục.";
+      }
+    }
+
+    window.onload = function() {
+      popup.style.display = "block";
+    };
+  </script>
+  <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+
+<head>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/63d920b3474251287910a848/1go42ffff';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</head>  
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"> ⬆️</button>
+
+
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+  <form action="https://api.follow.it/subscription-form/N1c2RGswMjZvNmVXTFZDOXlBd1BjbFNhZXVqLy9tcld0TTNZVzVIdHFLZ29HMUtSRHZEYkhXa2RTblhpRWZleVVxN1N6QWlNVzdLVWM5WkJHVzhMSGVlTG42L3RtNGg1TUh3dk5CRlFxWUh5a1FXcWlWclFWYmsxUUJ2UVFyNjN8ZHdSTEV5YU9QVk9oRWwzNWhhWS9HMXh0VFhKN0VYMjNKSXhEZ0VkL2s5ST0=/21" method="post">
+</body>
+</body>
+</html>
