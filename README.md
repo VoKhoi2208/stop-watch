@@ -1,7 +1,7 @@
 # Stopwatch
 
 ## Giới thiệu
-Đây là một ứng dụng stopwatch đơn giản được viết bằng Markdown.
+Đây là một ứng dụng stopwatch đơn giản được viết bằng HTML.
 
 ## Hướng dẫn sử dụng
 1. Bấm vào nút "Bắt đầu" để bắt đầu đếm thời gian.
