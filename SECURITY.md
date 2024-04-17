@@ -43,12 +43,12 @@ If you have any questions or concerns about this Security Policy or the "Guess N
 Use this section to tell people about which versions of your project are
 currently being supported with security updates.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| OS       | Supported          |
+| -------  | ------------------ |
+| Window    | :white_check_mark: |
+| MacOS    | ✅                |
+| Android    | :white_check_mark: |
+| IOS    | ✅               |
 
 ## Reporting a Vulnerability
 
